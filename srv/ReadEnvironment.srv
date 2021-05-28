@@ -1,0 +1,8 @@
+std_msgs/Empty empty
+---
+uint8 NONE=0
+uint8 ROCK=1
+uint8 TREE=2
+uint8 CRAFTING_TABLE=3
+
+uint8 reading
