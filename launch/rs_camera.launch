@@ -13,14 +13,9 @@
   <arg name="fisheye_height"      default="-1"/>
   <arg name="enable_fisheye"      default="false"/>
 
-  <arg name="mode"              default="manual" />
-  <arg name="color_width"       default="1920" />
-  <arg name="color_height"      default="1080" />
-  <arg name="color_fps"         default="5" />
-  <arg name="enable_depth"      default="false"/>
-  <arg name="enable_color"        default="true"/>
-  <arg name="enable_gyro"         default="false"/>
-  <arg name="enable_accel"        default="false"/>
+  <arg name="depth_width"         default="-1"/>
+  <arg name="depth_height"        default="-1"/>
+  <arg name="enable_depth"        default="false"/>
 
   <arg name="confidence_width"    default="-1"/>
   <arg name="confidence_height"   default="-1"/>
@@ -34,6 +29,18 @@
   <arg name="enable_infra2"       default="false"/>
   <arg name="infra_rgb"           default="false"/>
 
+  <arg name="color_width"         default="960"/>
+  <arg name="color_height"        default="540"/>
+  <arg name="enable_color"        default="true"/>
+
+  <arg name="fisheye_fps"         default="-1"/>
+  <arg name="depth_fps"           default="-1"/>
+  <arg name="infra_fps"           default="15"/>
+  <arg name="color_fps"           default="15"/>
+  <arg name="gyro_fps"            default="-1"/>
+  <arg name="accel_fps"           default="-1"/>
+  <arg name="enable_gyro"         default="false"/>
+  <arg name="enable_accel"        default="false"/>
 
   <arg name="enable_pointcloud"         default="false"/>
   <arg name="pointcloud_texture_stream" default="RS2_STREAM_COLOR"/>
@@ -72,11 +79,11 @@
       <arg name="device_type"              value="$(arg device_type)"/>
       <arg name="json_file_path"           value="$(arg json_file_path)"/>
 
-      <arg name="enable_pointcloud"        value="$(arg enable_pointcloud)"/>
+      <arg name="enable_pointcloud"         value="$(arg enable_pointcloud)"/>
       <arg name="pointcloud_texture_stream" value="$(arg pointcloud_texture_stream)"/>
       <arg name="pointcloud_texture_index"  value="$(arg pointcloud_texture_index)"/>
-      <arg name="enable_sync"              value="$(arg enable_sync)"/>
-      <arg name="align_depth"             value="$(arg align_depth)"/>
+      <arg name="enable_sync"               value="$(arg enable_sync)"/>
+      <arg name="align_depth"               value="$(arg align_depth)"/>
 
       <arg name="fisheye_width"            value="$(arg fisheye_width)"/>
       <arg name="fisheye_height"           value="$(arg fisheye_height)"/>
