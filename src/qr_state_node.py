@@ -28,6 +28,13 @@ def image_read(image):
 
 def handle_read_env(req):
     req.empty  # input is empty, ignore
+    try:
+        return read_env()
+    except:
+        rospy.logerr("failed to read environment. We'll try again...")
+        return read_env()
+
+def read_env():
     global IMAGE
     if IMAGE is None:
         return ReadEnvironmentResponse(ReadEnvironmentResponse.NONE)
