@@ -70,7 +70,7 @@ def read_env_server():
     global MOST_RECENT_TIME
     MOST_RECENT_TIME = time.time()
     rospy.Subscriber('/camera/color/image_raw', Image, image_read)
-    s = rospy.Service('read_environment', ReadEnvironment, handle_read_env)
+    s = rospy.Service('/qr_state_reader/read_environment', ReadEnvironment, handle_read_env)
     print("Ready to read your env.")
     rospy.spin()
     s.shutdown()
